@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9PA-Wj-wVH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="204"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9yy-QK-PIC">
+                                <rect key="frame" x="119" y="271" width="363" height="29"/>
+                                <segments>
+                                    <segment title="ScaleToFill"/>
+                                    <segment title="AspectFit"/>
+                                    <segment title="AspectFill"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentedOne:" destination="BYZ-38-t0r" eventType="valueChanged" id="56G-uH-3vW"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rH8-AT-RTL">
+                                <rect key="frame" x="119" y="339" width="363" height="29"/>
+                                <segments>
+                                    <segment title="Redraw"/>
+                                    <segment title="Center"/>
+                                    <segment title="Top"/>
+                                    <segment title="Bottom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentedSecond:" destination="BYZ-38-t0r" eventType="valueChanged" id="FkP-2w-smz"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="42M-6u-AGx">
+                                <rect key="frame" x="119" y="475" width="363" height="29"/>
+                                <segments>
+                                    <segment title="TopLeft"/>
+                                    <segment title="TopRight"/>
+                                    <segment title="BottomLeft"/>
+                                    <segment title="BottomRight"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegmentedFourth:" destination="BYZ-38-t0r" eventType="valueChanged" id="VqV-WH-Hfd"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fcQ-Ux-PdS">
+                                <rect key="frame" x="119" y="407" width="363" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="eJS-IC-TOA"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eJS-IC-TOA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="SegmentedThird:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bai-uS-gze"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9PA-Wj-wVH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0Jw-8x-dw7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9PA-Wj-wVH" secondAttribute="trailing" constant="-16" id="2LN-rv-uno"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="trailing" secondItem="9yy-QK-PIC" secondAttribute="trailing" id="40y-JS-tXg"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="42M-6u-AGx" secondAttribute="leading" id="4ti-cQ-0fP"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="trailing" secondItem="9yy-QK-PIC" secondAttribute="trailing" id="7Jb-Sq-UkQ"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="top" secondItem="rH8-AT-RTL" secondAttribute="bottom" constant="40" id="AmH-dz-NPX"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="9yy-QK-PIC" secondAttribute="leading" id="DLm-jr-Asc"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="42M-6u-AGx" secondAttribute="leading" id="FMV-2R-Kqu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="42M-6u-AGx" secondAttribute="bottom" constant="97" id="Gpu-Sa-9yo"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="trailing" secondItem="fcQ-Ux-PdS" secondAttribute="trailing" id="ITq-Wh-XJh"/>
+                            <constraint firstItem="42M-6u-AGx" firstAttribute="top" secondItem="fcQ-Ux-PdS" secondAttribute="bottom" constant="40" id="J0v-Yb-MGs"/>
+                            <constraint firstItem="42M-6u-AGx" firstAttribute="top" secondItem="fcQ-Ux-PdS" secondAttribute="bottom" constant="40" id="LO8-Qu-gDS"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="leading" secondItem="42M-6u-AGx" secondAttribute="leading" id="Llp-vQ-ff4"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="top" secondItem="9yy-QK-PIC" secondAttribute="bottom" constant="40" id="OAc-zz-nTd"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="fcQ-Ux-PdS" secondAttribute="leading" id="PPm-vV-eb4"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="top" secondItem="rH8-AT-RTL" secondAttribute="bottom" constant="40" id="UCX-5b-s56"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="top" secondItem="9yy-QK-PIC" secondAttribute="bottom" constant="40" id="WPN-Mn-9lF"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="trailing" secondItem="9yy-QK-PIC" secondAttribute="trailing" id="ZMK-FV-ndm"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="centerX" secondItem="9PA-Wj-wVH" secondAttribute="centerX" id="cKh-gv-7qa"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="trailing" secondItem="42M-6u-AGx" secondAttribute="trailing" id="fdw-tt-MgB"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="trailing" secondItem="42M-6u-AGx" secondAttribute="trailing" id="geS-Ll-XpP"/>
+                            <constraint firstItem="9PA-Wj-wVH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="hWH-6y-bxb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9PA-Wj-wVH" secondAttribute="bottom" constant="396" id="hiR-xk-x2Q"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="leading" secondItem="9yy-QK-PIC" secondAttribute="leading" id="hwo-y1-dDv"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="trailing" secondItem="fcQ-Ux-PdS" secondAttribute="trailing" id="lI4-Mx-Q9O"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="centerX" secondItem="9PA-Wj-wVH" secondAttribute="centerX" id="nDJ-ec-dAI"/>
+                            <constraint firstItem="9PA-Wj-wVH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rPF-QB-PoK"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="fcQ-Ux-PdS" secondAttribute="leading" id="ren-5M-8nw"/>
+                            <constraint firstItem="fcQ-Ux-PdS" firstAttribute="trailing" secondItem="rH8-AT-RTL" secondAttribute="trailing" id="xh9-1O-y02"/>
+                            <constraint firstItem="rH8-AT-RTL" firstAttribute="leading" secondItem="9yy-QK-PIC" secondAttribute="leading" id="xmL-Su-6Gs"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="hWH-6y-bxb"/>
+                                <exclude reference="FMV-2R-Kqu"/>
+                                <exclude reference="OAc-zz-nTd"/>
+                                <exclude reference="ZMK-FV-ndm"/>
+                                <exclude reference="lI4-Mx-Q9O"/>
+                                <exclude reference="ren-5M-8nw"/>
+                                <exclude reference="xmL-Su-6Gs"/>
+                                <exclude reference="7Jb-Sq-UkQ"/>
+                                <exclude reference="AmH-dz-NPX"/>
+                                <exclude reference="Llp-vQ-ff4"/>
+                                <exclude reference="cKh-gv-7qa"/>
+                                <exclude reference="fdw-tt-MgB"/>
+                                <exclude reference="hwo-y1-dDv"/>
+                                <exclude reference="xh9-1O-y02"/>
+                                <exclude reference="LO8-Qu-gDS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="9PA-Wj-wVH" id="eJe-44-Tgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="224" y="326"/>
+        </scene>
+    </scenes>
+</document>
